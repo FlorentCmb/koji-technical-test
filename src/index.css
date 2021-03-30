@@ -1,7 +1,15 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* CSS Variables and default settings */
 html, body {
   --defaultColor: rgb(161, 161, 161);
   --secondColor: white;
   --thirdColor: black;
-  --defaultBgColor: rgb(147, 147, 231);
+  --defaultBgColor: rgb(121, 190, 100);
+  --secondBgColor: rgb(240, 239, 234);
+  --thirdBgColor: rgb(146, 218, 125);
   margin: 0;
+  background-color: var(--secondBgColor);
+  font-family: 'Roboto', sans-serif;
 }
