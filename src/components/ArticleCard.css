@@ -1,12 +1,33 @@
 .ArticleCard {
-    width: 300px;
+    width: 280px;
+    margin-bottom: 20px;
     border-radius: 15px;
-    border: 1px solid var(--defaultColor);
+    border: 1px solid var(--defaultBgColor);
     padding: 10px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 100, .6) 5px 5px 5px;
+    transition-duration: .5s;
+}
+
+.ArticleCard:hover {
+    transform: scale(1.05) rotate(.6deg);
+}
+
+.ArticleCard-Picture {
+    width: 100%;
+    height: auto;
 }
 
 .ArticleCard-Title {
-    text-decoration: underline;
     color: var(--thirdColor);
     margin-top: 0;
+    text-transform: capitalize;
+}
+
+.ArticleCard:hover .ArticleCard-Title {
+    text-decoration: underline;
+}
+
+.ArticleCard-TextPreview {
+    color: var(--defaultColor);
 }
