@@ -11,5 +11,5 @@
 }
 
 .Header-Link:hover {
-    background-color: var(--secondColor);
+    background-color: var(--thirdBgColor);
 }
