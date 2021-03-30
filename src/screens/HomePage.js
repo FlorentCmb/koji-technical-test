@@ -22,19 +22,14 @@ const HomePage = () => {
     }, [])
 
     return (
-        <div className="HomePage">
-            {articles.length > 0 ? (
-                <div className="HomePage-Articles-Container">
-                    {articles.map(article => (
-                        <ArticleCard articleData={article} key={`Article n°${article.id}`} />
-                    ))}
-                </div>
-            ) : (
-            <div className="HomePage-NoData">
-                No articles.
+        <section className="HomePage">
+            <h1 className="HomePage-Title">Articles :</h1>
+            <div className="HomePage-Articles-Container">
+                {articles.length > 0 && articles.map(article => (
+                    <ArticleCard articleData={article} key={`Article n°${article.id}`} />
+                ))}
             </div>
-            )}
-        </div>
+        </section>
     )
 }
 

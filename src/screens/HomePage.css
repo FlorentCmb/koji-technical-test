@@ -1,6 +1,23 @@
-.HomePage-Articles-Container {
-    width: 100%;
+.HomePage {
+    width: 90%;
+    margin: 30px auto;
+    border: 1px solid var(--defaultBgColor);
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.HomePage-Title {
+    margin-top: 0;
+    background-color: var(--defaultBgColor);
+    color: var(--secondColor);
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    transform: translateY(-25px);
+}
+
+.HomePage-Articles-Container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
