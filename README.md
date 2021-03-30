@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Questions du test techniques
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Quelle librairie allez vous utiliser pour gérer l'état de l'application ?
 
-## Available Scripts
+Pour gérer l'état de l'application, j'utiliserai la librairie react-redux, car il faut que les données utilisateurs soient accessibles sur chacunes des pages de l'application. De cette manière, un utilisateur "lambda" n'aura pas accès aux pages qui sont réservées à l'admin.
 
-In the project directory, you can run:
+## Quelles pages sont nécessaires ?
 
-### `npm start`
+Il y aura besoin de la page de register / login pour permettre aux utilisateurs de créer un compte ou de se connecter, d'une page d'accueil, qui contiendra les articles créés par les utilisateurs. Ensuite, il faudra une page de création d'articles, qui sera une sorte de formulaire que l'utilisateur devra remplir, et une page qui détaillera un article, avec peut-être la possibilité de modifier ou supprimer celui-ci.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Comment allez-vous agencer votre navigation ?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Pour la navigation, j'utiliserai la librairie react-router-dom, en vérifiant à chaque fois le rôle de l'utilisateur actuel, pour qu'il ne puisse pas accéder à des pages qui ne le concernent pas. Il y aura donc un lien vers la page d'accueil, un lien vers la création d'articles, et les articles listés dans la page d'accueil contiendront aussi un lien pour consulter ces derniers.
 
-### `npm test`
+## Quelles sont les requêtes d'api dont vous allez avoir besoin au minimum ?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Au minimum, il y aura besoin de deux requêtes GET, une requête POST, et peut-être une requête PUT et une DELETE (si l'on souhaite pouvoir modifier / supprimer des articles).
 
-### `npm run build`
+## Comment allez-vous gérer l'exécution des requêtes d'api et le retour asynchrone de celles-ci ?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La gestion des requêtes API peut se faire avec la librairie Axios, qui permet donc les requêtes asynchrones et la gestion des réponses. Ensuite, si l'on a récupéré des données via ces requêtes, on peut les envoyer dans Redux afin de les rendre accessibles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Comment allez-vous gérer l'authentification ?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+L'authentification peut se gérer avec Axios aussi, la requête envoyée sera ensuite gérée par une autre librairie en back, passportjs, afin de renvoyer une réponse ainsi que les données utilisateur.
 
-### `npm run eject`
+## Bonus: Vous devez mettre en place une version "dark" optionnel dans l'application. Comment allez-vous procéder ?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+J'utiliserais react-redux, déjà mis en place, pour garder en mémoire le thème actuel du site, par exemple, ce sera une clé `theme` dont la valeur serait "white" ou "dark", ou bien une clé `darkTheme` qui aurait donc une valeur booléene.
