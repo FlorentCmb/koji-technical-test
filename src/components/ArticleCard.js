@@ -19,7 +19,7 @@ const ArticleCard = ({ articleData }) => {
 
     return (
         <div className="ArticleCard" onClick={redirect}>
-            <img className="ArticleCard-Picture" src={defaultBackground} alt="Article Picture" />
+            <img className="ArticleCard-Picture" src={defaultBackground} alt={`Article n°${articleData.id}'s picture`} />
             <h3 to={`/article/${articleData.id}`} className="ArticleCard-Title" title={`Visit article n°${articleData.id}`}>{articleData.title}</h3>
             <p className="ArticleCard-TextPreview">{getPreview(articleData.body)}</p>
             {redirecting ? <Redirect to={`/article/${articleData.id}`} /> : ""}
