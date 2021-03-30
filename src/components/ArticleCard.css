@@ -7,5 +7,6 @@
 
 .ArticleCard-Title {
     text-decoration: underline;
+    color: var(--thirdColor);
     margin-top: 0;
 }

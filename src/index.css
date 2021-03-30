@@ -1,6 +1,7 @@
 html, body {
   --defaultColor: rgb(161, 161, 161);
   --secondColor: white;
+  --thirdColor: black;
   --defaultBgColor: rgb(147, 147, 231);
   margin: 0;
 }

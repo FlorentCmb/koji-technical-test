@@ -1,10 +1,12 @@
+// Librairies
+import { Link } from 'react-router-dom'
 // Style
 import './ArticleCard.css'
 
 const ArticleCard = ({ articleData }) => {
     return (
         <div className="ArticleCard">
-            <h4 className="ArticleCard-Title">{articleData.title}</h4>
+            <Link to={`/article/${articleData.id}`} className="ArticleCard-Title">{articleData.title}</Link>
             <p className="ArticleCard-Content">{articleData.body}</p>
         </div>
     )
