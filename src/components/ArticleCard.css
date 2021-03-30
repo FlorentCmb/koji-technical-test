@@ -1,0 +1,11 @@
+.ArticleCard {
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid var(--defaultColor);
+    padding: 10px;
+}
+
+.ArticleCard-Title {
+    text-decoration: underline;
+    margin-top: 0;
+}

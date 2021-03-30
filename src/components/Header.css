@@ -1,0 +1,15 @@
+.Header {
+    background-color: var(--defaultBgColor);
+    padding: 20px;
+}
+
+.Header-Link {
+    padding: 20px;
+    text-decoration: none;
+    color: var(--secondColor);
+    transition-duration: .5s;
+}
+
+.Header-Link:hover {
+    background-color: var(--secondColor);
+}
