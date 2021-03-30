@@ -1,0 +1,28 @@
+.ArticlePage {
+    width: 100vw;
+}
+
+.ArticlePage-Container {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--defaultBgColor);
+    border-radius: 15px;
+}
+
+.ArticlePage-Title {
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: inline;
+}
+
+.ArticlePage-Number {
+    font-size: 15px;
+    color: var(--defaultColor);
+    text-decoration: underline;
+}
+
+.ArticlePage-Body {
+    font-size: 17px;
+}

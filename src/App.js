@@ -2,6 +2,7 @@
 import { Switch, Route } from 'react-router-dom'
 // Screens
 import HomePage from './screens/HomePage'
+import ArticlePage from './screens/ArticlePage'
 // Components
 import Header from './components/Header'
 // Style
@@ -9,17 +10,17 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className="App">
+    <main className="App">
       <Header />
       <Switch>
         <Route exact path="/">
           <HomePage />
         </Route>
         <Route path="/article/:id">
-          {/* Single article page */}
+          <ArticlePage />
         </Route>
       </Switch>
-    </div>
+    </main>
   )
 }
 
